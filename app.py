@@ -115,7 +115,7 @@ Keep the tone practical and strategic — focus on feasible, impactful solutions
     st.write(response.content)
 
 
-from pyngrok import ngrok
+#from pyngrok import ngrok
 import os
 import time
 import threading
@@ -125,10 +125,10 @@ import subprocess
 os.environ["OPENAI_API_KEY"] = "d97f2b19c2ac41a199df1af70b9d007e"
 
 # Kill any existing ngrok tunnels
-ngrok.kill()
+#ngrok.kill()
 
 # Set your ngrok auth token
-ngrok.set_auth_token("308KJTypEv4LojS9HM3Iu5UrBoA_3qFWHTXNhUwcgngobNzyu")
+#ngrok.set_auth_token("308KJTypEv4LojS9HM3Iu5UrBoA_3qFWHTXNhUwcgngobNzyu")
 
 # Run Streamlit in a thread so it doesn't block
 def run():
@@ -141,5 +141,5 @@ thread.start()
 time.sleep(5)
 
 # Create ngrok tunnel
-tunnel = ngrok.connect(8501)
+#tunnel = ngrok.connect(8501)
 print(f"🚀 Your Streamlit app is live: {tunnel.public_url}")
