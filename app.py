@@ -19,10 +19,10 @@ from langchain.chat_models import AzureChatOpenAI
 # ================================
 # 🔐 Azure OpenAI Configuration
 # ================================
-AZURE_API_KEY = "d97f2b19c2ac41a199df1af70b9d007e"
-AZURE_ENDPOINT = "https://global-azureopenai-dev-eastus2.openai.azure.com/"
-AZURE_API_VERSION = "2024-09-01-preview"
-CHAT_DEPLOYMENT_NAME = "Global-AzureOpenAI-DEV-o1-preview"  # ✅ Chat model only
+AZURE_API_KEY = st.secrets["AZURE_API_KEY"]
+AZURE_ENDPOINT = st.secrets["AZURE_ENDPOINT"]
+AZURE_API_VERSION = st.secrets["AZURE_API_VERSION"]
+CHAT_DEPLOYMENT_NAME = st.secrets["CHAT_DEPLOYMENT_NAME"]  # ✅ Chat model only
 
 # ================================
 # 🧠 Load and Embed Excel Data
@@ -122,7 +122,7 @@ import threading
 import subprocess
 
 # Set OpenAI key (optional if already in app.py)
-os.environ["OPENAI_API_KEY"] = "d97f2b19c2ac41a199df1af70b9d007e"
+os.environ["OPENAI_API_KEY"] = st.secrets["AZURE_API_KEY"]
 
 # Kill any existing ngrok tunnels
 #ngrok.kill()
