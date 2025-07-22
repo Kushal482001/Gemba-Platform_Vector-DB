@@ -142,4 +142,4 @@ time.sleep(5)
 
 # Create ngrok tunnel
 #tunnel = ngrok.connect(8501)
-print(f"🚀 Your Streamlit app is live: {tunnel.public_url}")
+#print(f"🚀 Your Streamlit app is live: {tunnel.public_url}")
