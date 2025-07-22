@@ -90,6 +90,9 @@ Startup/Tech Solutions:
 
 Operations Process Flows:
 {o_text}
+
+User Query
+{query}
 ---
 
 Your output should include the following:
